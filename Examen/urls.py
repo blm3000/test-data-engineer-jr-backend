@@ -16,7 +16,24 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls import url
+from Vuelos import resources
+from tastypie.api import Api
+
+# Creamos una instancia de la Para poder utilizar la API
+get_data = Api(api_name='get-data')
+get_data.register(resources.PasajerosRecurso())
+get_data.register(resources.VuelosRecurso())
+get_data.register(resources.AerolineasRecurso())
+get_data.register(resources.VuelosPasajerosRecurso())
+get_data.register(resources.AereoVueloPasajero())
+
+
+put_data = Api(api_name='put-data')
+put_data.register(resources.AerolineasPut())
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('vuelos/', include('Vuelos.urls'))
+    path('vuelos/', include('Vuelos.urls')),
+    path('', include(get_data.urls)),
+    path('', include(put_data.urls)),
 ]

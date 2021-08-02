@@ -1,0 +1,15 @@
+post_url = "http://localhost:8000/put-data/aerolineas/"
+
+datos = {"Code": "PB", "Linea_Aerea": "Prueba Put"}
+
+headers = {'Content-type': 'application/json'}
+
+import requests
+import json
+
+r = requests.post(post_url, json.dumps(post_data), headers=headers)
+
+r = requests.post(post_url, json.dumps(datos), headers=headers)
+
+print(r.status_code)
+
