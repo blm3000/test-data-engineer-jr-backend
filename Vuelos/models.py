@@ -22,9 +22,6 @@ class Pasajeros(models.Model):
     Pasajero = models.CharField(max_length=200, help_text="Nombre del pasajero")
     Edad = models.IntegerField(help_text="Edad actual del pasajero")
 
-    #class Meta:
-    #   unique_together = (('ID_Pasajero', 'id'),)
-
     def __str__(self):
         return str(self.ID_Pasajero) +"_"+ self.Pasajero
 
