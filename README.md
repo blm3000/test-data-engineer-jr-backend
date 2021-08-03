@@ -20,6 +20,11 @@ La instrucción anterior creará un servidor local, con nomenclatura similar a `
 
 #### Exposición de datos en apis
 
+A continuación se muestra como acceder a la información obtenida por la API, deberá sustituir las palabras "servidor:puerto" por el servidor donde corre su pues servidor
+
+EJ `http://localhost:8000/get-data/aerolineas-vuelos-pasajeros/?Clase=First%20Class`
+Para el filtrado de la lista Aerolíneas-Vuelos-Pasajeros por ahora se soporta la Clase. Podrá envíar First Class, Economy o Business
+
 | Dataset                                    | Api                                                               |
 | -------------------------                  | ----------------------------------------------------------------- |
 | Lista Pasajeros                            | http://servidor:puerto/get-data/pasajeros                               |
