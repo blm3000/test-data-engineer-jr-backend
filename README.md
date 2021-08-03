@@ -22,10 +22,10 @@ La instrucción anterior creará un servidor local, con nomenclatura similar a `
 
 | Dataset                                    | Api                                                               |
 | -------------------------                  | ----------------------------------------------------------------- |
-| Lista Pasajeros                            | http://localhost/get-data/pasajeros                               |
-| Lista Vuelos                               | http://localhost/get-data/vuelos                                  |
-| Lista Aerolineas                           | http://localhost/get-data/aerolineas                              |
-| Lista Vuelos-Pasajeros                     | http://localhost/get-data/vuelos-pasajeros                        |
-| Lista Aerolíneas-Vuelos-Pasajeros          | http://localhost/get-data/aerolineas-vuelos-pasajeros             |
-| Agregar Aerolineas                         | http://localhost/put-data/aerolineas                              |
+| Lista Pasajeros                            | http://servidor:puerto/get-data/pasajeros                               |
+| Lista Vuelos                               | http://servidor:puerto/get-data/vuelos                                  |
+| Lista Aerolineas                           | http://servidor:puerto/get-data/aerolineas                              |
+| Lista Vuelos-Pasajeros                     | http://servidor:puerto/get-data/vuelos-pasajeros                        |
+| Lista Aerolíneas-Vuelos-Pasajeros          | http://servidor:puerto/get-data/aerolineas-vuelos-pasajeros             |
+| Agregar Aerolineas                         | http://servidor:puerto/put-data/aerolineas                              |
 
