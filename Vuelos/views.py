@@ -1,22 +1,21 @@
 # Archivo views para controlar los direccionamientos de la aplicación "Vuelos"
 
-from django.shortcuts import render, HttpResponse
-from Vuelos.models import Lineas_Aereas, Pasajeros, Vuelos # importamos los modelos
+from django.shortcuts import render
+from Vuelos.models import Lineas_Aereas, Pasajeros, Vuelos  # importamos los modelos
 # Create your views here.
 
 
 # la pagina principal que mostrara el template principal
 def home(request):
-	# return HttpResponse("principal")
-    return render(request,"Vuelos/home.html")
+    vuelos_all = Vuelos.objects.all()
+    cols = Vuelos._meta.local_fields
 
-
-# # vista que sirve para mostrar los datos de las cuentas 
-# def cuentas(request):
-#     pagos_all = CalendarioPago.objects.all()
-#     trans_all = Transaccion.objects.all()
-    
-#     return render(request,"cuentas/cuentas.html",{"pagos": pagos_all, "transacciones": trans_all})
+    return render(
+        request,
+        "Vuelos/home.html",
+        {'vuelos': vuelos_all,
+         'columnas': cols},
+    )
 
 # # vista que controla lo que pasa cuando se agrega un nuevo pago
 # def agregarPago(request):
