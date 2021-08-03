@@ -84,7 +84,9 @@
                 </div>
                 <!-- /.card-body -->
               <div class="card-footer">
-                  <button type="submit" class="btn btn-primary" align="right">Nuevo Registro</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
+                  Nueva Aerolinea
+                </button>
               </div>
               </div>
               <!-- /.card -->
@@ -98,7 +100,37 @@
       <!-- /.content -->
     </div>
 
- 
+  <div class="modal fade" id="modal-default">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="card-title">Registro de nueva aerolinea</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+               <form action="vuelos/agregar_aerolinea/" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Code:</label>
+                        <input type="text" required name="newCode" class="form-control" placeholder="Ingrese codigo" maxlength="7">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Nombre Aerolínea:</label>
+                        <input type="text" required name="newNombre" class="form-control" maxlength="60" placeholder="Ingrese Nombre">
+                    </div>
+                    <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+                </form>
+            </div>
+            
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
   </div>
   <!-- ./wrapper -->
 

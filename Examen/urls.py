@@ -33,7 +33,7 @@ put_data.register(resources.AerolineasPut())
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('vuelos/', include('Vuelos.urls')),
+    path('', include('Vuelos.urls')),
     path('', include(get_data.urls)),
     path('', include(put_data.urls)),
 ]

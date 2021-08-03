@@ -2,8 +2,7 @@ from django.urls import path
 from Vuelos import views
 
 urlpatterns = [
-    path('', views.home, name = 'Home'),
-    # path('cuentas/',views.cuentas, name ='Cuentas'),
-    # path('agregarPago/',views.agregarPago,name = 'agregarPago'),
-    
+    path('', views.home, name='Home'),
+    path('vuelos/agregar_aerolinea/', views.agregar_aerolinea,
+         name='agregar_aerolinea'),
 ]
