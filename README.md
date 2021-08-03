@@ -1,16 +1,24 @@
 # Ejercicio práctico para Data Engineer Jr Backend Developer en Deacero.
 
-Debe realizar un fork de este repositorio para desarrollar y entregar su trabajo.
 
-Se tiene un requerimiento de análisis de datos de pasajeros, viajes y aerolineas, debemos de proveer APIs para su consumo.
-1. Se requiere unificar las listas anuales de vuelos y pasajeros.
-2. Las listas obtenidas en el paso anterior y la lista de aerolineas deben de poder accederse mediante una llamada api y con respuesta JSON.
-3. Es necesario relacionar las listas de vuelos y pasajeros anteriormente unificadas y hacer una pagina donde se muestre el resultado en formato de libre elección (llamada api JSON, HTML tabla, etc).
-4. Los datos obtenidos en el paso anterior se deben relacionar con los datos de las Líneas Aéreas. En caso de no existir la linea aérea catalogarla como otra. El resultado puede mostrarse en formato de libre elección (llamada api JSON, HTML tabla, etc).
-5. Se requiere el consumo de datos resultantes filtrados por Linea aerea. El resultado puede mostrarse en formato de libre elección (llamada api JSON, HTML tabla, etc).
-6. Por último se pide realizar un mecanismo de captura para registrar una nueva linea aerea a la lista de datos que ya existe. La implementación es a libre elección (llamada api PUT JSON, página HTML, etc).
+# Instalación
 
-#### Tip: Esposicion de datos en apis
+1. Clonar repositorio a su local
+2. Crear un ambiente virtual en su local
+3. Ejecutar el comando `pip install -r requirements.txt` para instalar los paquetes necesarios
+
+# Ejecución
+Una vez instalados los requerimientos:
+- Ejecutar el siguiente comando `python manage.py runserver`\
+La instrucción anterior creará un servidor local, con nomenclatura similar a `Starting development server at http://127.0.0.1:8000/`
+- Acceder a la dirección generada
+
+- Una vez en la pantalla principal podrá ver el listado de vuelos con sus respectivos usuarios y aerolíneas.
+- Podra aplicar un filtro a la tabla por cualquier parámetro que guste
+- En la parte de abajo tendrá un botón para agregar una nueva aerolínea
+
+
+#### Exposición de datos en apis
 
 | Dataset                                    | Api                                                               |
 | -------------------------                  | ----------------------------------------------------------------- |
@@ -21,10 +29,3 @@ Se tiene un requerimiento de análisis de datos de pasajeros, viajes y aerolinea
 | Lista Aerolíneas-Vuelos-Pasajeros          | http://localhost/get-data/aerolineas-vuelos-pasajeros             |
 | Agregar Aerolineas                         | http://localhost/put-data/aerolineas                              |
 
-  Nota: En caso de optar por las apis se propone esta nomenclatura, el api de aerolineas-vuelos-pasajers puede tener un paramtero para el filtrado de datos cuando sea necesario.
-
-Los ejercicios deben realizarse en Django3 - Python3.8 y utilizando el ORM correspondiente, las vistas html pueden realizarse en el mismo framework o mostrarlas de manera nativa o como mejor le convenga. 
-
-Una vez concluido el reto se debe comunicar al correo <jguerrero@deacero.com> con la liga al repositorio de github final para evaluar las respuestas.
-
-Suerte a todos!!! :metal: :nerd_face: :computer:
