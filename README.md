@@ -28,4 +28,5 @@ La instrucción anterior creará un servidor local, con nomenclatura similar a `
 | Lista Vuelos-Pasajeros                     | http://servidor:puerto/get-data/vuelos-pasajeros                        |
 | Lista Aerolíneas-Vuelos-Pasajeros          | http://servidor:puerto/get-data/aerolineas-vuelos-pasajeros             |
 | Agregar Aerolineas                         | http://servidor:puerto/put-data/aerolineas                              |
+| Lista Aerolíneas-Vuelos-Pasajeros filtro   | http://servidor:puerto/get-data/aerolineas-vuelos-pasajeros/?Clase=Algo |
 
